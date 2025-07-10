@@ -537,3 +537,461 @@ body {
 .dropdown-item:hover {
   background: #4a90e2;
 }
+
+/* Member Registration Styles */
+.member-registration {
+  background: #f0f0f0;
+  min-height: calc(100vh - 120px);
+  padding: 20px;
+}
+
+.registration-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-label {
+  color: #4a90e2;
+  font-weight: bold;
+}
+
+.user-input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.page-title {
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.search-btn {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.registration-content {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 20px;
+}
+
+/* Left Panel */
+.left-panel {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.photo-section {
+  margin-bottom: 20px;
+}
+
+.photo-placeholder {
+  width: 120px;
+  height: 150px;
+  border: 2px dashed #ddd;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  background: #f9f9f9;
+  border-radius: 8px;
+  position: relative;
+}
+
+.photo-controls {
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.photo-controls .control-btn {
+  padding: 5px 8px;
+  font-size: 10px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.photo-controls .cancel {
+  background: #e74c3c;
+  color: white;
+}
+
+.photo-controls .upload {
+  background: #3498db;
+  color: white;
+}
+
+.photo-controls .webcam {
+  background: #2ecc71;
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+  font-size: 13px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 10px;
+}
+
+.relative-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+}
+
+.relative-select {
+  width: 80px !important;
+}
+
+.contact-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 5px;
+}
+
+.country-code {
+  background: #f0f0f0;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.contact-row input {
+  border-radius: 0 4px 4px 0;
+  border-left: none;
+}
+
+.add-time-btn {
+  background: #27ae60;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+/* Center Panel - Biometric Device */
+.center-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.biometric-device {
+  background: #333;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.device-screen {
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 10px;
+  color: white;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen-header {
+  color: #ff4444;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.time-display {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.device-brand {
+  color: #ccc;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.fingerprint-guide {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hand-diagram {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.hand {
+  position: relative;
+  width: 80px;
+  height: 100px;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120"><path d="M50 10 C30 10, 15 25, 15 45 L15 80 C15 95, 25 105, 40 105 L60 105 C75 105, 85 95, 85 80 L85 45 C85 25, 70 10, 50 10 Z M35 20 L35 60 M50 15 L50 65 M65 20 L65 60 M25 35 L25 70 M75 35 L75 70" stroke="%23333" stroke-width="2" fill="none"/></svg>') no-repeat center;
+  background-size: contain;
+}
+
+.finger-number {
+  position: absolute;
+  background: #ff4444;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.left-hand .finger-number:nth-child(1) { top: 30px; left: 5px; }
+.left-hand .finger-number:nth-child(2) { top: 10px; left: 25px; }
+.left-hand .finger-number:nth-child(3) { top: 5px; left: 45px; }
+.left-hand .finger-number:nth-child(4) { top: 10px; left: 65px; }
+.left-hand .finger-number:nth-child(5) { top: 25px; left: 80px; }
+
+.right-hand .finger-number:nth-child(1) { top: 25px; left: -5px; }
+.right-hand .finger-number:nth-child(2) { top: 10px; left: 15px; }
+.right-hand .finger-number:nth-child(3) { top: 5px; left: 35px; }
+.right-hand .finger-number:nth-child(4) { top: 10px; left: 55px; }
+.right-hand .finger-number:nth-child(5) { top: 30px; left: 75px; }
+
+/* Right Panel */
+.right-panel {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.packages-section {
+  margin-bottom: 20px;
+}
+
+.packages-section label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.gender-options {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.gender-options label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.package-select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+}
+
+.fees-section {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.fee-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.fee-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.fee-group label {
+  font-size: 12px;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.fee-group input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.highlighted-fee {
+  background: #ffff99 !important;
+}
+
+.gym-commission {
+  margin: 15px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.total-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 15px 0;
+  padding: 10px;
+  background: white;
+  border-radius: 5px;
+}
+
+.amount {
+  color: #e74c3c;
+  font-size: 20px;
+}
+
+.payment-section {
+  margin: 20px 0;
+}
+
+.payment-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.account-select {
+  background: #e8f5e8 !important;
+}
+
+.balance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 15px 0;
+}
+
+.balance-amount {
+  color: #27ae60;
+}
+
+.save-member-btn {
+  background: linear-gradient(135deg, #e67e22, #d35400);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.save-member-btn:hover {
+  background: linear-gradient(135deg, #d35400, #c0392b);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design for Member Registration */
+@media (max-width: 1200px) {
+  .registration-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .center-panel {
+    order: 3;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .fee-row,
+  .payment-row {
+    grid-template-columns: 1fr;
+  }
+}

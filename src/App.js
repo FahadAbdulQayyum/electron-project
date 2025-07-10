@@ -295,9 +295,239 @@ function App() {
           </div>
         )}
         {currentView === 'add-member' && (
-          <div className="placeholder-view">
-            <h2>Add New Member</h2>
-            <p>Add new member functionality coming soon...</p>
+          <div className="member-registration">
+            <div className="registration-header">
+              <div className="user-section">
+                <span className="user-label">User:</span>
+                <input type="text" className="user-input" />
+              </div>
+              <h2 className="page-title">New Member Registration</h2>
+              <button className="search-btn">Search</button>
+            </div>
+            
+            <div className="registration-content">
+              {/* Left Panel - Personal Information */}
+              <div className="left-panel">
+                <div className="photo-section">
+                  <div className="photo-placeholder">
+                    <div className="photo-controls">
+                      <button className="control-btn cancel">Cancel</button>
+                      <button className="control-btn upload">Upload</button>
+                      <button className="control-btn webcam">Capture Webcam</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="form-group">
+                  <label>Account Open Date</label>
+                  <div className="date-input">
+                    <input type="date" value="2024-11-23" />
+                    <span className="dropdown-arrow">▼</span>
+                  </div>
+                </div>
+
+                <div className="form-row">
+                  <div className="form-group">
+                    <label>Full Name</label>
+                    <input type="text" />
+                  </div>
+                  <div className="form-group">
+                    <label>Height</label>
+                    <input type="number" placeholder="0" />
+                  </div>
+                  <div className="form-group">
+                    <label>Weight</label>
+                    <input type="number" placeholder="0" />
+                  </div>
+                </div>
+
+                <div className="form-group">
+                  <label>Relative</label>
+                  <div className="relative-row">
+                    <select className="relative-select">
+                      <option>S/O</option>
+                      <option>D/O</option>
+                      <option>W/O</option>
+                    </select>
+                    <input type="text" className="relative-name" />
+                  </div>
+                </div>
+
+                <div className="form-row">
+                  <div className="form-group">
+                    <label>Gender</label>
+                    <select>
+                      <option>Select</option>
+                      <option>Male</option>
+                      <option>Female</option>
+                    </select>
+                  </div>
+                  <div className="form-group">
+                    <label>Contact #</label>
+                    <div className="contact-row">
+                      <span className="country-code">+92</span>
+                      <input type="tel" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="form-group">
+                  <label>Address</label>
+                  <input type="text" />
+                </div>
+
+                <div className="form-group">
+                  <label>Member Status</label>
+                  <select>
+                    <option>Active</option>
+                    <option>Inactive</option>
+                    <option>Suspended</option>
+                  </select>
+                </div>
+
+                <div className="form-row">
+                  <div className="form-group">
+                    <label>Day Timing</label>
+                    <select>
+                      <option>Select</option>
+                      <option>Morning</option>
+                      <option>Evening</option>
+                      <option>All Day</option>
+                    </select>
+                  </div>
+                  <div className="form-group">
+                    <label>Time</label>
+                    <select>
+                      <option>None</option>
+                      <option>6:00 AM - 10:00 AM</option>
+                      <option>5:00 PM - 9:00 PM</option>
+                    </select>
+                    <button className="add-time-btn">+</button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Center - Biometric Device */}
+              <div className="center-panel">
+                <div className="biometric-device">
+                  <div className="device-screen">
+                    <div className="screen-header">Error</div>
+                    <div className="screen-content">
+                      <div className="time-display">18:21</div>
+                    </div>
+                  </div>
+                  <div className="device-brand">ZKTeco</div>
+                </div>
+                <div className="fingerprint-guide">
+                  <div className="hand-diagram">
+                    <div className="hand left-hand">
+                      <span className="finger-number">0</span>
+                      <span className="finger-number">1</span>
+                      <span className="finger-number">2</span>
+                      <span className="finger-number">3</span>
+                      <span className="finger-number">4</span>
+                    </div>
+                    <div className="hand right-hand">
+                      <span className="finger-number">5</span>
+                      <span className="finger-number">6</span>
+                      <span className="finger-number">7</span>
+                      <span className="finger-number">8</span>
+                      <span className="finger-number">9</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Panel - Package & Payment Information */}
+              <div className="right-panel">
+                <div className="packages-section">
+                  <label>Packages</label>
+                  <div className="gender-options">
+                    <label><input type="radio" name="packageGender" defaultChecked /> All</label>
+                    <label><input type="radio" name="packageGender" /> Male</label>
+                    <label><input type="radio" name="packageGender" /> Female</label>
+                  </div>
+                  <select className="package-select">
+                    <option>DEFAULT PACKAGE</option>
+                  </select>
+                </div>
+
+                <div className="form-group">
+                  <label>Packages Expiry Date</label>
+                  <div className="date-input">
+                    <input type="date" value="2024-12-23" />
+                    <span className="dropdown-arrow">▼</span>
+                  </div>
+                </div>
+
+                <div className="form-group">
+                  <label>Trainer/Helper</label>
+                  <select>
+                    <option>Select</option>
+                  </select>
+                </div>
+
+                <div className="fees-section">
+                  <div className="fee-row">
+                    <div className="fee-group">
+                      <label>Admission Fee</label>
+                      <input type="number" value="0" className="highlighted-fee" />
+                    </div>
+                    <div className="fee-group">
+                      <label>Monthly Fee</label>
+                      <input type="number" value="2500" />
+                    </div>
+                  </div>
+
+                  <div className="fee-row">
+                    <div className="fee-group">
+                      <label>Trainer Fee</label>
+                      <input type="number" value="0" />
+                    </div>
+                    <div className="fee-group">
+                      <label>Trainer Commission</label>
+                      <input type="number" value="0" />
+                    </div>
+                  </div>
+
+                  <div className="gym-commission">
+                    <label>Gym Commission: <span>0</span></label>
+                  </div>
+
+                  <div className="total-amount">
+                    <label>Total Amount:</label>
+                    <span className="amount">2500</span>
+                  </div>
+                </div>
+
+                <div className="payment-section">
+                  <div className="form-group">
+                    <label>Select Account</label>
+                    <select className="account-select">
+                      <option>Select</option>
+                    </select>
+                  </div>
+
+                  <div className="payment-row">
+                    <div className="form-group">
+                      <label>Cheque No</label>
+                      <input type="text" />
+                    </div>
+                    <div className="form-group">
+                      <label>Payment</label>
+                      <input type="number" />
+                    </div>
+                  </div>
+
+                  <div className="balance">
+                    <label>Balance:</label>
+                    <span className="balance-amount">0</span>
+                  </div>
+                </div>
+
+                <button className="save-member-btn">Save New Member</button>
+              </div>
+            </div>
           </div>
         )}
         {currentView === 'add-trainer' && (
