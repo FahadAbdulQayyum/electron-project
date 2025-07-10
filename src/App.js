@@ -400,11 +400,11 @@ function App() {
             onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
             onMouseOut={(e) => e.target.style.textDecoration = 'none'}
           >
-            +923232846250
+            :&nbsp; +923232846250
           </a>
           </span>
         </div>
-        <div>Activate Windows - Go to Settings</div>
+        <div>Build your software with us!</div>
       </footer>
     </div>
   );
