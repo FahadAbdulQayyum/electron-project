@@ -218,12 +218,46 @@ function App() {
               </div>
             </div>
           </div>
-          <button 
-            className={`nav-btn ${currentView === 'members' ? 'active' : ''}`}
-            onClick={() => setCurrentView('members')}
-          >
-            👥 Members
-          </button>
+          <div className="dropdown">
+            <button 
+              className={`nav-btn ${currentView === 'members' ? 'active' : ''}`}
+              onClick={() => setCurrentView('members')}
+            >
+              👥 Members
+            </button>
+            <div className="dropdown-content">
+              <div className="dropdown-item" onClick={() => setCurrentView('add-member')}>
+                Add New Member
+              </div>
+              <div className="dropdown-item" onClick={() => setCurrentView('add-trainer')}>
+                Add Trainer/Helper
+              </div>
+              <div className="dropdown-item" onClick={() => setCurrentView('add-packages')}>
+                Add Packages
+              </div>
+              <div className="dropdown-item" onClick={() => setCurrentView('check-attendance')}>
+                Check Member Attendance
+              </div>
+              <div className="dropdown-item" onClick={() => setCurrentView('daily-attendance')}>
+                Daily Attendance Report
+              </div>
+              <div className="dropdown-item" onClick={() => setCurrentView('all-members')}>
+                Show all Member Detail
+              </div>
+              <div className="dropdown-item" onClick={() => setCurrentView('daily-sales')}>
+                Daily Sales Report
+              </div>
+              <div className="dropdown-item" onClick={() => setCurrentView('add-fee-payment')}>
+                Add Fee Payment
+              </div>
+              <div className="dropdown-item" onClick={() => setCurrentView('fee-expiry')}>
+                Fee Expiry Member Report
+              </div>
+              <div className="dropdown-item" onClick={() => setCurrentView('due-fee')}>
+                Due Fee Report
+              </div>
+            </div>
+          </div>
           <button 
             className={`nav-btn ${currentView === 'pos' ? 'active' : ''}`}
             onClick={() => setCurrentView('pos')}
@@ -257,7 +291,67 @@ function App() {
         {currentView === 'members' && (
           <div className="placeholder-view">
             <h2>Members Management</h2>
-            <p>Members functionality coming soon...</p>
+            <p>Select an option from the Members dropdown menu above.</p>
+          </div>
+        )}
+        {currentView === 'add-member' && (
+          <div className="placeholder-view">
+            <h2>Add New Member</h2>
+            <p>Add new member functionality coming soon...</p>
+          </div>
+        )}
+        {currentView === 'add-trainer' && (
+          <div className="placeholder-view">
+            <h2>Add Trainer/Helper</h2>
+            <p>Add trainer/helper functionality coming soon...</p>
+          </div>
+        )}
+        {currentView === 'add-packages' && (
+          <div className="placeholder-view">
+            <h2>Add Packages</h2>
+            <p>Add packages functionality coming soon...</p>
+          </div>
+        )}
+        {currentView === 'check-attendance' && (
+          <div className="placeholder-view">
+            <h2>Check Member Attendance</h2>
+            <p>Check member attendance functionality coming soon...</p>
+          </div>
+        )}
+        {currentView === 'daily-attendance' && (
+          <div className="placeholder-view">
+            <h2>Daily Attendance Report</h2>
+            <p>Daily attendance report functionality coming soon...</p>
+          </div>
+        )}
+        {currentView === 'all-members' && (
+          <div className="placeholder-view">
+            <h2>Show all Member Detail</h2>
+            <p>Show all member details functionality coming soon...</p>
+          </div>
+        )}
+        {currentView === 'daily-sales' && (
+          <div className="placeholder-view">
+            <h2>Daily Sales Report</h2>
+            <p>Daily sales report functionality coming soon...</p>
+          </div>
+        )}
+        {currentView === 'add-fee-payment' && (
+          <div className="placeholder-view">
+            <h2>Add Fee Payment</h2>
+            <p>Add fee payment functionality coming soon...</p>
+          </div>
+        )}
+        {currentView === 'fee-expiry' && (
+          <div className="placeholder-view">
+            <h2>Fee Expiry Member Report</h2>
+            <p>Fee expiry member report functionality coming soon...</p>
+          </div>
+        )}
+        {currentView === 'due-fee' && (
+          <div className="placeholder-view">
+            <h2>Due Fee Report</h2>
+            <p>Due fee report functionality coming soon...</p>
           </div>
         )}
         {currentView === 'pos' && (
@@ -296,8 +390,19 @@ function App() {
           </a>
         </div>
         <div>
-          <span>App Code: RG-408</span>
-          <span style={{marginLeft: '20px'}}>Help Line 0092-315-1150070</span>
+          <span>App Code: FHD-1998</span>
+          <span style={{marginLeft: '20px'}}>Help Line 
+          <a 
+            href="https://wa.me/+923232846250" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{color: '#4a90e2', textDecoration: 'none'}}
+            onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
+            onMouseOut={(e) => e.target.style.textDecoration = 'none'}
+          >
+            +923232846250
+          </a>
+          </span>
         </div>
         <div>Activate Windows - Go to Settings</div>
       </footer>
