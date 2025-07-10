@@ -2,6 +2,8 @@
   "name": "my-electron-app",
   "version": "0.1.0",
   "private": true,
+  "main": "main.js",
+  "homepage": "./",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -13,8 +15,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=9000 && react-scripts start",
     "build": "react-scripts build",
+    "electron": "electron .",
+    "dev": "concurrently \"npm start\" \"wait-on http://localhost:9000 && electron .\"",
+    "pack": "npm run build && electron .",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -35,5 +40,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "electron": "^37.2.0",
+    "electron-is-dev": "^3.0.1",
+    "wait-on": "^8.0.3"
   }
 }
