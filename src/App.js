@@ -9,6 +9,7 @@ import AddPackageScreen from './screens/AddPackageScreen';
 import DailyAttendanceScreen from './screens/DailyAttendanceScreen';
 import CheckMemberAttendanceScreen from './screens/CheckMemberAttendanceScreen';
 import AddPaymentFeeScreen from './screens/AddPaymentFeeScreen';
+import SelectMemberScreen from './screens/SelectMemberScreen';
 
 function App() {
   const [currentView, setCurrentView] = useState('dashboard');
@@ -54,6 +55,9 @@ function App() {
             <div className="dropdown-content">
               <div className="dropdown-item" onClick={() => setCurrentView('add-member')}>
                 Add New Member
+              </div>
+              <div className="dropdown-item" onClick={() => setCurrentView('select-member')}>
+                Select Member
               </div>
               <div className="dropdown-item" onClick={() => setCurrentView('add-trainer')}>
                 Add Trainer/Helper
@@ -114,6 +118,7 @@ function App() {
       <div className="main-content">
         {currentView === 'dashboard' && <DashboardScreen />}
         {currentView === 'add-member' && <AddMemberScreen />}
+        {currentView === 'select-member' && <SelectMemberScreen />}
         {currentView === 'add-trainer' && <AddTrainerScreen />}
         {currentView === 'add-packages' && <AddPackageScreen />}
         {currentView === 'daily-attendance' && <DailyAttendanceScreen />}
