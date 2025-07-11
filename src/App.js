@@ -5,6 +5,7 @@ import { BsBank2 } from 'react-icons/bs';
 import DashboardScreen from './screens/DashboardScreen';
 import AddMemberScreen from './screens/AddMemberScreen';
 import AddTrainerScreen from './screens/AddTrainerScreen';
+import AddPackageScreen from './screens/AddPackageScreen';
 
 function App() {
   const [currentView, setCurrentView] = useState('dashboard');
@@ -111,6 +112,7 @@ function App() {
         {currentView === 'dashboard' && <DashboardScreen />}
         {currentView === 'add-member' && <AddMemberScreen />}
         {currentView === 'add-trainer' && <AddTrainerScreen />}
+        {currentView === 'add-packages' && <AddPackageScreen />}
         {/* Add other screens here as you refactor them */}
         {currentView === 'home' && (
           <div className="placeholder-view">
