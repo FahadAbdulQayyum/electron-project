@@ -309,7 +309,10 @@ function App() {
               {/* Left Panel - Personal Information */}
               <div className="left-panel">
                 <div className="photo-section">
-                  <div className="photo-placeholder">
+                  <div className="photo-container">
+                    <div className="photo-placeholder">
+                      {/* Photo will be displayed here */}
+                    </div>
                     <div className="photo-controls">
                       <button className="control-btn cancel">Cancel</button>
                       <button className="control-btn upload">Upload</button>
@@ -408,7 +411,7 @@ function App() {
               </div>
 
               {/* Center - Biometric Device */}
-              <div className="center-panel">
+              {/* <div className="center-panel">
                 <div className="biometric-device">
                   <div className="device-screen">
                     <div className="screen-header">Error</div>
@@ -436,7 +439,7 @@ function App() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Right Panel - Package & Payment Information */}
               <div className="right-panel">
