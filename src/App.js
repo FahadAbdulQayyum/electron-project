@@ -10,6 +10,7 @@ import DailyAttendanceScreen from './screens/DailyAttendanceScreen';
 import CheckMemberAttendanceScreen from './screens/CheckMemberAttendanceScreen';
 import AddPaymentFeeScreen from './screens/AddPaymentFeeScreen';
 import SelectMemberScreen from './screens/SelectMemberScreen';
+import { myGithub, myPhone } from './utils/constants';
 
 function App() {
   const [currentView, setCurrentView] = useState('dashboard');
@@ -144,30 +145,12 @@ function App() {
       <footer className="footer">
         <div>
           Copyright, all rights reserved by{' '}
-          <a 
-            href="https://github.com/FahadAbdulQayyum" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            style={{color: '#4a90e2', textDecoration: 'none'}}
-            onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
-            onMouseOut={(e) => e.target.style.textDecoration = 'none'}
-          >
-            FahadAbdulQayyum
-          </a>
+          {myGithub}
         </div>
         <div>
           <span>App Code: FHD-1998</span>
           <span style={{marginLeft: '20px'}}>Help Line 
-          <a 
-            href="https://wa.me/+923232846250" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            style={{color: '#4a90e2', textDecoration: 'none'}}
-            onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
-            onMouseOut={(e) => e.target.style.textDecoration = 'none'}
-          >
-            :&nbsp; +923232846250
-          </a>
+          {myPhone}
           </span>
         </div>
         <div>Build your software with us!</div>
