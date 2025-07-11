@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import './App.css';
+import { FaUserPlus, FaChartBar, FaMoneyBillWave, FaUniversity, FaHandHoldingUsd, FaShoppingCart, FaChartLine, FaTachometerAlt, FaUsers, FaCashRegister, FaBank, FaFileInvoiceDollar, FaUserCheck, FaRegCalendarCheck, FaListAlt, FaFileAlt, FaMoneyCheckAlt, FaExclamationCircle, FaCamera, FaUpload, FaTimes } from 'react-icons/fa';
+import { BsBank2 } from 'react-icons/bs';
 
 function App() {
   const [currentView, setCurrentView] = useState('dashboard');
@@ -29,7 +31,7 @@ function App() {
       <div className="dashboard-grid">
         <div className="dashboard-card">
           <div className="card-icon">
-            <div className="icon-orange">👤</div>
+            <div className="icon-orange"><FaUserPlus /></div>
           </div>
           <div className="card-number">0</div>
           <div className="card-title">Total New Admissions</div>
@@ -37,7 +39,7 @@ function App() {
 
         <div className="dashboard-card">
           <div className="card-icon">
-            <div className="icon-orange">📊</div>
+            <div className="icon-orange"><FaChartBar /></div>
           </div>
           <div className="card-number">10</div>
           <div className="card-title">Total Member Attendance</div>
@@ -45,7 +47,7 @@ function App() {
 
         <div className="dashboard-card">
           <div className="card-icon">
-            <div className="icon-orange">💰</div>
+            <div className="icon-orange"><FaMoneyBillWave /></div>
           </div>
           <div className="card-stats">
             <div className="stat-row">
@@ -62,7 +64,7 @@ function App() {
 
         <div className="dashboard-card">
           <div className="card-icon">
-            <div className="icon-orange">🏦</div>
+            <div className="icon-orange"><FaUniversity /></div>
           </div>
           <div className="card-stats">
             <div className="stat-row">
@@ -79,7 +81,7 @@ function App() {
 
         <div className="dashboard-card">
           <div className="card-icon">
-            <div className="icon-orange">💵</div>
+            <div className="icon-orange"><FaHandHoldingUsd /></div>
           </div>
           <div className="card-stats">
             <div className="stat-row">
@@ -96,7 +98,7 @@ function App() {
 
         <div className="dashboard-card">
           <div className="card-icon">
-            <div className="icon-orange">🛒</div>
+            <div className="icon-orange"><FaShoppingCart /></div>
           </div>
           <div className="card-stats">
             <div className="stat-row">
@@ -113,7 +115,7 @@ function App() {
 
         <div className="dashboard-card">
           <div className="card-icon">
-            <div className="icon-orange">📈</div>
+            <div className="icon-orange"><FaChartLine /></div>
           </div>
           <div className="card-stats">
             <div className="stat-row">
@@ -167,7 +169,7 @@ function App() {
             TRAINERS
           </p>
           <button className="join-btn">
-            ➤ JOIN NOW
+            <FaUserPlus style={{marginRight: 8}} /> JOIN NOW
           </button>
         </div>
         
@@ -181,7 +183,7 @@ function App() {
       {/* Right Logo */}
       <div className="right-logo">
         <div className="right-logo-text">
-          💪<br/>
+          <FaTachometerAlt style={{fontSize: '2rem', color: '#e67e22'}} /><br/>
           GYMM
         </div>
       </div>
@@ -194,7 +196,8 @@ function App() {
       <header className="header">
         <div className="logo-section">
           <div className="logo">
-            YOUR<br/>GYM<br/>LOGO
+            <FaTachometerAlt style={{fontSize: '1.5rem', color: '#fff'}} /><br/>
+            GYM LOGO
           </div>
           <div className="gym-title">
             GYM Management System
@@ -207,14 +210,14 @@ function App() {
               className={`nav-btn ${currentView === 'dashboard' ? 'active' : ''}`}
               onClick={() => setCurrentView('dashboard')}
             >
-              🏠 Dashboard
+              <FaTachometerAlt style={{marginRight: 6}} /> Dashboard
             </button>
             <div className="dropdown-content">
               <div className="dropdown-item" onClick={() => setCurrentView('dashboard')}>
-                Daily Dashboard
+                <FaRegCalendarCheck style={{marginRight: 6}} /> Daily Dashboard
               </div>
               <div className="dropdown-item" onClick={() => setCurrentView('home')}>
-                Software Screen
+                <FaFileAlt style={{marginRight: 6}} /> Software Screen
               </div>
             </div>
           </div>
@@ -223,38 +226,38 @@ function App() {
               className={`nav-btn ${currentView === 'members' ? 'active' : ''}`}
               onClick={() => setCurrentView('members')}
             >
-              👥 Members
+              <FaUsers style={{marginRight: 6}} /> Members
             </button>
             <div className="dropdown-content">
               <div className="dropdown-item" onClick={() => setCurrentView('add-member')}>
-                Add New Member
+                <FaUserPlus style={{marginRight: 6}} /> Add New Member
               </div>
               <div className="dropdown-item" onClick={() => setCurrentView('add-trainer')}>
-                Add Trainer/Helper
+                <FaUserCheck style={{marginRight: 6}} /> Add Trainer/Helper
               </div>
               <div className="dropdown-item" onClick={() => setCurrentView('add-packages')}>
-                Add Packages
+                <FaListAlt style={{marginRight: 6}} /> Add Packages
               </div>
               <div className="dropdown-item" onClick={() => setCurrentView('check-attendance')}>
-                Check Member Attendance
+                <FaFileInvoiceDollar style={{marginRight: 6}} /> Check Member Attendance
               </div>
               <div className="dropdown-item" onClick={() => setCurrentView('daily-attendance')}>
-                Daily Attendance Report
+                <FaRegCalendarCheck style={{marginRight: 6}} /> Daily Attendance Report
               </div>
               <div className="dropdown-item" onClick={() => setCurrentView('all-members')}>
-                Show all Member Detail
+                <FaUsers style={{marginRight: 6}} /> Show all Member Detail
               </div>
               <div className="dropdown-item" onClick={() => setCurrentView('daily-sales')}>
-                Daily Sales Report
+                <FaFileAlt style={{marginRight: 6}} /> Daily Sales Report
               </div>
               <div className="dropdown-item" onClick={() => setCurrentView('add-fee-payment')}>
-                Add Fee Payment
+                <FaMoneyCheckAlt style={{marginRight: 6}} /> Add Fee Payment
               </div>
               <div className="dropdown-item" onClick={() => setCurrentView('fee-expiry')}>
-                Fee Expiry Member Report
+                <FaExclamationCircle style={{marginRight: 6}} /> Fee Expiry Member Report
               </div>
               <div className="dropdown-item" onClick={() => setCurrentView('due-fee')}>
-                Due Fee Report
+                <FaFileInvoiceDollar style={{marginRight: 6}} /> Due Fee Report
               </div>
             </div>
           </div>
@@ -262,19 +265,19 @@ function App() {
             className={`nav-btn ${currentView === 'pos' ? 'active' : ''}`}
             onClick={() => setCurrentView('pos')}
           >
-            🛒 POS
+            <FaCashRegister style={{marginRight: 6}} /> POS
           </button>
           <button 
             className={`nav-btn ${currentView === 'accounts' ? 'active' : ''}`}
             onClick={() => setCurrentView('accounts')}
           >
-            🏦 Bank Accounts
+            <BsBank2 style={{marginRight: 6}} /> Bank Accounts
           </button>
           <button 
             className={`nav-btn ${currentView === 'expenditure' ? 'active' : ''}`}
             onClick={() => setCurrentView('expenditure')}
           >
-            📊 Expenditure
+            <FaChartBar style={{marginRight: 6}} /> Expenditure
           </button>
         </nav>
 
@@ -314,9 +317,9 @@ function App() {
                       {/* Photo will be displayed here */}
                     </div>
                     <div className="photo-controls">
-                      <button className="control-btn cancel">Cancel</button>
-                      <button className="control-btn upload">Upload</button>
-                      <button className="control-btn webcam">Capture Webcam</button>
+                      <button className="control-btn cancel"><FaTimes style={{marginRight: 6}} /> Cancel</button>
+                      <button className="control-btn upload"><FaUpload style={{marginRight: 6}} /> Upload</button>
+                      <button className="control-btn webcam"><FaCamera style={{marginRight: 6}} /> Capture Webcam</button>
                     </div>
                   </div>
                 </div>
