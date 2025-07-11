@@ -7,6 +7,7 @@ import AddMemberScreen from './screens/AddMemberScreen';
 import AddTrainerScreen from './screens/AddTrainerScreen';
 import AddPackageScreen from './screens/AddPackageScreen';
 import DailyAttendanceScreen from './screens/DailyAttendanceScreen';
+import CheckMemberAttendanceScreen from './screens/CheckMemberAttendanceScreen';
 
 function App() {
   const [currentView, setCurrentView] = useState('dashboard');
@@ -115,6 +116,7 @@ function App() {
         {currentView === 'add-trainer' && <AddTrainerScreen />}
         {currentView === 'add-packages' && <AddPackageScreen />}
         {currentView === 'daily-attendance' && <DailyAttendanceScreen />}
+        {currentView === 'check-attendance' && <CheckMemberAttendanceScreen />}
         {/* Add other screens here as you refactor them */}
         {currentView === 'home' && (
           <div className="placeholder-view">

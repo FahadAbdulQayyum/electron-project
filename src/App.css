@@ -1315,3 +1315,121 @@ body {
     gap: 10px;
   }
 }
+
+/* Check Member Attendance Section */
+.check-member-attendance-section {
+  background: #f5f5f5;
+  padding: 24px 16px 16px 16px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.attendance-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  gap: 20px;
+}
+
+.attendance-member-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.member-id-input {
+  width: 60px;
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.member-name-input {
+  width: 220px;
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.attendance-date-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.month-select, .year-input {
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.attendance-check-btn {
+  background: #b71c1c;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.2s;
+  margin-left: 10px;
+}
+.attendance-check-btn:hover {
+  background: #e53935;
+}
+
+.attendance-table-wrapper {
+  margin-top: 18px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 10px;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.attendance-table th, .attendance-table td {
+  border: 1px solid #bbb;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.attendance-table th {
+  background: #bdbdbd;
+  color: #222;
+  font-weight: bold;
+}
+
+.attendance-table td {
+  background: #fff;
+}
+
+@media (max-width: 900px) {
+  .attendance-header-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .attendance-member-bar, .attendance-date-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+}
