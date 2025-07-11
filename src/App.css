@@ -1433,3 +1433,136 @@ body {
     gap: 10px;
   }
 }
+
+/* Add Payment Fee Section */
+.add-payment-fee-section {
+  background: #f5f5f5;
+  padding: 24px 16px 16px 16px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.payment-fee-header-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  padding: 10px 10px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  margin-bottom: 10px;
+}
+
+.fee-input {
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 15px;
+  min-width: 90px;
+  background: #fff;
+}
+
+.yellow-bg {
+  background: #fffbe6 !important;
+}
+
+.attendance-check-btn {
+  background: #b71c1c;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.2s;
+}
+.attendance-check-btn:hover {
+  background: #e53935;
+}
+
+.pay-fee-btn {
+  background: #27ae60;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.2s;
+}
+.pay-fee-btn:hover {
+  background: #2ecc71;
+}
+
+.fee-ledger-label {
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: #333;
+}
+
+.attendance-table-wrapper {
+  margin-top: 8px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 10px;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.attendance-table th, .attendance-table td {
+  border: 1px solid #bbb;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.attendance-table th {
+  background: #bdbdbd;
+  color: #222;
+  font-weight: bold;
+}
+
+.attendance-table td {
+  background: #fff;
+}
+
+.fee-summary-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 12px;
+  font-size: 15px;
+  align-items: center;
+  background: #fff;
+  border-radius: 6px;
+  padding: 10px 18px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.fee-green {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.fee-orange {
+  color: #e67e22;
+  font-weight: bold;
+}
+
+@media (max-width: 1100px) {
+  .payment-fee-header-row {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .fee-summary-row {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+}
