@@ -15,6 +15,7 @@ import DueFeeReportScreen from './screens/DueFeeReportScreen';
 import PosPLScreen from './screens/PosPLScreen';
 import PosMainScreen from './screens/PosMainScreen';
 import PosAddProductScreen from './screens/PosAddProductScreen';
+import ExpenditureScreen from './screens/ExpenditureScreen';
 import { myGithub, myPhone } from './utils/constants';
 
 function App() {
@@ -150,6 +151,7 @@ function App() {
         {currentView === 'add-fee-payment' && <AddPaymentFeeScreen />}
         {currentView === 'fee-expiry' && <FeeExpiryReportScreen />}
         {currentView === 'due-fee' && <DueFeeReportScreen />}
+        {currentView === 'expenditure' && <ExpenditureScreen />}
         {currentView === 'home' && (
           <div className="placeholder-view">
             <h2>Software Screen</h2>
