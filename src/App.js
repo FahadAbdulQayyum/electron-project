@@ -10,6 +10,7 @@ import DailyAttendanceScreen from './screens/DailyAttendanceScreen';
 import CheckMemberAttendanceScreen from './screens/CheckMemberAttendanceScreen';
 import AddPaymentFeeScreen from './screens/AddPaymentFeeScreen';
 import SelectMemberScreen from './screens/SelectMemberScreen';
+import FeeExpiryReportScreen from './screens/FeeExpiryReportScreen';
 import { myGithub, myPhone } from './utils/constants';
 
 function App() {
@@ -125,6 +126,7 @@ function App() {
         {currentView === 'daily-attendance' && <DailyAttendanceScreen />}
         {currentView === 'check-attendance' && <CheckMemberAttendanceScreen />}
         {currentView === 'add-fee-payment' && <AddPaymentFeeScreen />}
+        {currentView === 'fee-expiry' && <FeeExpiryReportScreen />}
         {/* Add other screens here as you refactor them */}
         {currentView === 'home' && (
           <div className="placeholder-view">
