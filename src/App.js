@@ -91,12 +91,30 @@ function App() {
               </div>
             </div>
           </div>
-          <button 
-            className={`nav-btn ${currentView === 'pos' ? 'active' : ''}`}
-            onClick={() => setCurrentView('pos')}
-          >
-            <FaCashRegister style={{marginRight: 6}} /> POS
-          </button>
+          <div className="dropdown">
+            <button 
+              className={`nav-btn ${currentView.startsWith('pos-') ? 'active' : ''}`}
+            >
+              <FaCashRegister style={{marginRight: 6}} /> POS
+            </button>
+            <div className="dropdown-content">
+              <div className="dropdown-item" onClick={() => setCurrentView('pos-add-products')}>
+                Add Products
+              </div>
+              <div className="dropdown-item" onClick={() => setCurrentView('pos-pos')}>
+                POS
+              </div>
+              <div className="dropdown-item" onClick={() => setCurrentView('pos-edit-sale-order')}>
+                Edit Sale Order
+              </div>
+              <div className="dropdown-item" onClick={() => setCurrentView('pos-add-stock')}>
+                Add Stock
+              </div>
+              <div className="dropdown-item" onClick={() => setCurrentView('pos-pl')}>
+                POS P/L
+              </div>
+            </div>
+          </div>
           <button 
             className={`nav-btn ${currentView === 'accounts' ? 'active' : ''}`}
             onClick={() => setCurrentView('accounts')}
@@ -129,7 +147,6 @@ function App() {
         {currentView === 'add-fee-payment' && <AddPaymentFeeScreen />}
         {currentView === 'fee-expiry' && <FeeExpiryReportScreen />}
         {currentView === 'due-fee' && <DueFeeReportScreen />}
-        {/* Add other screens here as you refactor them */}
         {currentView === 'home' && (
           <div className="placeholder-view">
             <h2>Software Screen</h2>
@@ -142,7 +159,22 @@ function App() {
             <p>Select an option from the Members dropdown menu above.</p>
           </div>
         )}
-        {/* ...other placeholder views... */}
+        {currentView === 'pos-add-products' && (
+          <div className="placeholder-view"><h2>Add Products</h2><p>POS Add Products screen coming soon...</p></div>
+        )}
+        {currentView === 'pos-pos' && (
+          <div className="placeholder-view"><h2>POS</h2><p>POS main screen coming soon...</p></div>
+        )}
+        {currentView === 'pos-edit-sale-order' && (
+          <div className="placeholder-view"><h2>Edit Sale Order</h2><p>Edit Sale Order screen coming soon...</p></div>
+        )}
+        {currentView === 'pos-add-stock' && (
+          <div className="placeholder-view"><h2>Add Stock</h2><p>Add Stock screen coming soon...</p></div>
+        )}
+        {currentView === 'pos-pl' && (
+          <div className="placeholder-view"><h2>POS P/L</h2><p>POS Profit/Loss screen coming soon...</p></div>
+        )}
+        {/* Add other screens here as you refactor them */}
       </div>
 
       {/* Footer */}
