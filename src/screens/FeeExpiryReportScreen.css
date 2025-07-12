@@ -92,4 +92,12 @@
 }
 .fee-expiry-table td {
   background: #fff;
+}
+.highlight-row {
+  background: #1976d2 !important;
+  color: #fff !important;
+}
+.fee-expiry-table .highlight-row td {
+  background: #1976d2 !important;
+  color: #fff !important;
 } 
