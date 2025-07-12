@@ -12,6 +12,7 @@ import AddPaymentFeeScreen from './screens/AddPaymentFeeScreen';
 import SelectMemberScreen from './screens/SelectMemberScreen';
 import FeeExpiryReportScreen from './screens/FeeExpiryReportScreen';
 import DueFeeReportScreen from './screens/DueFeeReportScreen';
+import PosPLScreen from './screens/PosPLScreen';
 import { myGithub, myPhone } from './utils/constants';
 
 function App() {
@@ -171,9 +172,7 @@ function App() {
         {currentView === 'pos-add-stock' && (
           <div className="placeholder-view"><h2>Add Stock</h2><p>Add Stock screen coming soon...</p></div>
         )}
-        {currentView === 'pos-pl' && (
-          <div className="placeholder-view"><h2>POS P/L</h2><p>POS Profit/Loss screen coming soon...</p></div>
-        )}
+        {currentView === 'pos-pl' && <PosPLScreen />}
         {/* Add other screens here as you refactor them */}
       </div>
 
