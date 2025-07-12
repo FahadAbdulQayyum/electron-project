@@ -18,6 +18,7 @@ import PosAddProductScreen from './screens/PosAddProductScreen';
 import ExpenditureScreen from './screens/ExpenditureScreen';
 import BankLedgerScreen from './screens/BankLedgerScreen';
 import BankAccountsScreen from './screens/BankAccountsScreen';
+import DailySalesReportScreen from './screens/DailySalesReportScreen';
 import { myGithub, myPhone } from './utils/constants';
 
 function App() {
@@ -177,6 +178,7 @@ function App() {
           <div className="placeholder-view"><h2>Add Stock</h2><p>Add Stock screen coming soon...</p></div>
         )}
         {currentView === 'pos-pl' && <PosPLScreen />}
+        {currentView === 'daily-sales' && <DailySalesReportScreen />}
         {/* Add other screens here as you refactor them */}
       </div>
 
