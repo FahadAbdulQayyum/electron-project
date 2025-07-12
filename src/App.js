@@ -13,6 +13,7 @@ import SelectMemberScreen from './screens/SelectMemberScreen';
 import FeeExpiryReportScreen from './screens/FeeExpiryReportScreen';
 import DueFeeReportScreen from './screens/DueFeeReportScreen';
 import PosPLScreen from './screens/PosPLScreen';
+import PosMainScreen from './screens/PosMainScreen';
 import { myGithub, myPhone } from './utils/constants';
 
 function App() {
@@ -163,9 +164,7 @@ function App() {
         {currentView === 'pos-add-products' && (
           <div className="placeholder-view"><h2>Add Products</h2><p>POS Add Products screen coming soon...</p></div>
         )}
-        {currentView === 'pos-pos' && (
-          <div className="placeholder-view"><h2>POS</h2><p>POS main screen coming soon...</p></div>
-        )}
+        {currentView === 'pos-pos' && <PosMainScreen />}
         {currentView === 'pos-edit-sale-order' && (
           <div className="placeholder-view"><h2>Edit Sale Order</h2><p>Edit Sale Order screen coming soon...</p></div>
         )}
