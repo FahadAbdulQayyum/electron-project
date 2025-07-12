@@ -14,6 +14,7 @@ import FeeExpiryReportScreen from './screens/FeeExpiryReportScreen';
 import DueFeeReportScreen from './screens/DueFeeReportScreen';
 import PosPLScreen from './screens/PosPLScreen';
 import PosMainScreen from './screens/PosMainScreen';
+import PosAddProductScreen from './screens/PosAddProductScreen';
 import { myGithub, myPhone } from './utils/constants';
 
 function App() {
@@ -161,9 +162,7 @@ function App() {
             <p>Select an option from the Members dropdown menu above.</p>
           </div>
         )}
-        {currentView === 'pos-add-products' && (
-          <div className="placeholder-view"><h2>Add Products</h2><p>POS Add Products screen coming soon...</p></div>
-        )}
+        {currentView === 'pos-add-products' && <PosAddProductScreen />}
         {currentView === 'pos-pos' && <PosMainScreen />}
         {currentView === 'pos-edit-sale-order' && (
           <div className="placeholder-view"><h2>Edit Sale Order</h2><p>Edit Sale Order screen coming soon...</p></div>
