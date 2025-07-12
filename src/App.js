@@ -16,6 +16,8 @@ import PosPLScreen from './screens/PosPLScreen';
 import PosMainScreen from './screens/PosMainScreen';
 import PosAddProductScreen from './screens/PosAddProductScreen';
 import ExpenditureScreen from './screens/ExpenditureScreen';
+import BankLedgerScreen from './screens/BankLedgerScreen';
+import BankAccountsScreen from './screens/BankAccountsScreen';
 import { myGithub, myPhone } from './utils/constants';
 
 function App() {
@@ -152,6 +154,8 @@ function App() {
         {currentView === 'fee-expiry' && <FeeExpiryReportScreen />}
         {currentView === 'due-fee' && <DueFeeReportScreen />}
         {currentView === 'expenditure' && <ExpenditureScreen />}
+        {currentView === 'accounts' && <BankLedgerScreen />}
+        {currentView === 'bank-accounts' && <BankAccountsScreen />}
         {currentView === 'home' && (
           <div className="placeholder-view">
             <h2>Software Screen</h2>
